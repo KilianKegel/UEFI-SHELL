@@ -2753,8 +2753,8 @@ RunCommandOrFile (
       if (CommandWithPath == NULL) {
         CommandWithPath = ShellFindFilePathEx (FirstParameter, mExecutableExtensions);
       }
-
-      if (CommandWithPath == NULL) {
+      
+      if (0/*KilianKegel*/)if (CommandWithPath == NULL) {
       //
       // This should be impossible now.
       //

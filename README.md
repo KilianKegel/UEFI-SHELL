@@ -103,6 +103,9 @@ to run **VS2022**
 5. **VS2022** directly creates a `BOOTX64.EFI` **UEFI SHELL** binary in its output directory `UEFIBinaries`
 
 ## Revision history
+### 20250726 v1.202505.1 build 96
+* bugfix: PLUGIN mechanism didn't work with latest **edk2-stable202505** release anymore<br>
+  Now all "internal" .EFI tools (**diskpart**, **AslCompiler**, **AcpiBin**, **AcpiDump**,  **find**, **more**, **pciview**, etc. ) are available.
 ### 20250706 v1.202505.0 build 80
 * update to [**edk2-stable202505**](https://github.com/tianocore/edk2/releases/tag/edk2-stable202505)
 * update to **TORO C Library 20250706, v0.9.2 Build 289**
