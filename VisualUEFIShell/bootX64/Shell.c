@@ -445,11 +445,7 @@ UefiMain (
   //
   // Check PCDs for optional features that are not implemented yet.
   //
-  if (  PcdGetBool (PcdShellSupportOldProtocols)
-     || !FeaturePcdGet (PcdShellRequireHiiPlatform)
-     || FeaturePcdGet (PcdShellSupportFrameworkHii)
-        )
-  {
+  if (!FeaturePcdGet (PcdShellRequireHiiPlatform) || FeaturePcdGet (PcdShellSupportFrameworkHii)) {
     return (EFI_UNSUPPORTED);
   }
 
@@ -1352,10 +1348,11 @@ LocateStartupScript (
         wcscpy(wcsBootDrive, StartupScriptPath);
         RunCommand(wcsBootDrive);
     }
-
-    StartupScriptPath = StrnCatGrow (&StartupScriptPath, &Size, ((FILEPATH_DEVICE_PATH *)FileDevicePath)->PathName, 0);
-    PathRemoveLastItem (StartupScriptPath);
-    StartupScriptPath = StrnCatGrow (&StartupScriptPath, &Size, mStartupScript, 0);
+    if ((DevicePathType (FileDevicePath) == MEDIA_DEVICE_PATH) && (DevicePathSubType (FileDevicePath) == MEDIA_FILEPATH_DP)) {
+      StartupScriptPath = StrnCatGrow (&StartupScriptPath, &Size, ((FILEPATH_DEVICE_PATH *)FileDevicePath)->PathName, 0);
+      PathRemoveLastItem (StartupScriptPath);
+      StartupScriptPath = StrnCatGrow (&StartupScriptPath, &Size, mStartupScript, 0);
+    }
   }
 
   //
@@ -2731,7 +2728,7 @@ RunCommandOrFile (
           }
           if (0 == _wcsicmp(CmdLine, L"ver"))
           {
-              printf("\n    TORO UEFI SHELL with PLUGIN Extension, v%d.%d.%d Build %d\n    Based on \"edk2-stable202505\"\n\n", MAJORVER, MINORVER, PATCHVER, BUILDNUM);
+              printf("\n    TORO UEFI SHELL with PLUGIN Extension, v%d.%d.%d Build %d\n    Based on \"edk2-stable202508\"\n\n", MAJORVER, MINORVER, PATCHVER, BUILDNUM);
           }
       }
       break;

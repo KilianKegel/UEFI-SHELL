@@ -732,10 +732,11 @@ EfiShellGetDeviceName (
         continue;
       }
 
-      Lang   = GetBestLanguageForDriver (CompName2->SupportedLanguages, Language, FALSE);
+      Lang = GetBestLanguageForDriver (CompName2->SupportedLanguages, Language, FALSE);
       if (Lang == NULL) {
         continue;
       }
+
       Status = CompName2->GetControllerName (CompName2, DeviceHandle, NULL, Lang, &DeviceNameToReturn);
       FreePool (Lang);
       Lang = NULL;
@@ -783,10 +784,11 @@ EfiShellGetDeviceName (
               continue;
             }
 
-            Lang   = GetBestLanguageForDriver (CompName2->SupportedLanguages, Language, FALSE);
+            Lang = GetBestLanguageForDriver (CompName2->SupportedLanguages, Language, FALSE);
             if (Lang == NULL) {
               continue;
             }
+
             Status = CompName2->GetControllerName (CompName2, ParentControllerBuffer[LoopVar], DeviceHandle, Lang, &DeviceNameToReturn);
             FreePool (Lang);
             Lang = NULL;
@@ -1632,8 +1634,6 @@ InternalShellExecuteDevicePath (
 
     Status = gBS->InstallProtocolInterface (&NewHandle, &gEfiShellParametersProtocolGuid, EFI_NATIVE_INTERFACE, &ShellParamsProtocol);
     ASSERT_EFI_ERROR (Status);
-
-    /// @todo initialize and install ShellInterface protocol on the new image for compatibility if - PcdGetBool(PcdShellSupportOldProtocols)
 
     //
     // now start the image and if the caller wanted the return code pass it to them...
@@ -2863,7 +2863,11 @@ EfiShellGetEnvEx (
           ; Node = (ENV_VAR_LIST *)GetNextNode (&gShellEnvVarList.Link, &Node->Link)
           )
     {
-      ASSERT (Node->Key != NULL);
+      if (Node->Key == NULL) {
+        ASSERT (FALSE);
+        continue;
+      }
+
       Size += StrSize (Node->Key);
     }
 
@@ -3896,11 +3900,6 @@ CreatePopulateInstallShellProtocol (
                     );
   }
 
-  if (PcdGetBool (PcdShellSupportOldProtocols)) {
-    /// @todo support ShellEnvironment2
-    /// @todo do we need to support ShellEnvironment (not ShellEnvironment2) also?
-  }
-
   if (!EFI_ERROR (Status)) {
     *NewShell = &mShellProtocol;
   }
@@ -4004,7 +4003,7 @@ NotificationFunction (
   IN EFI_KEY_DATA  *KeyData
   )
 {
-  if ((((KeyData->Key.UnicodeChar == L'c') || (KeyData->Key.UnicodeChar == L'C')) &&
+  if ((((KeyData->Key.UnicodeChar == L'c'/*ctrl-c*/) || (KeyData->Key.UnicodeChar == L'C'/*ctrl-C*/)) &&
        ((KeyData->KeyState.KeyShiftState == (EFI_SHIFT_STATE_VALID|EFI_LEFT_CONTROL_PRESSED)) || (KeyData->KeyState.KeyShiftState  == (EFI_SHIFT_STATE_VALID|EFI_RIGHT_CONTROL_PRESSED)))) ||
       (KeyData->Key.UnicodeChar == 3)
       )
