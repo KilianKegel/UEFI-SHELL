@@ -1566,10 +1566,7 @@ InternalShellExecuteDevicePath (
     // If the image is not an app abort it.
     //
     if (LoadedImage->ImageCodeType != EfiLoaderCode) {
-      ShellPrintHiiEx (
-        -1,
-        -1,
-        NULL,
+      ShellPrintHiiDefaultEx (
         STRING_TOKEN (STR_SHELL_IMAGE_NOT_APP),
         ShellInfoObject.HiiHandle
         );
@@ -2765,6 +2762,7 @@ EfiShellOpenFileList (
     if (CurDir == NULL) {
       return EFI_NOT_FOUND;
     }
+
     ASSERT ((Path2 == NULL && Path2Size == 0) || (Path2 != NULL));
     StrnCatGrow (&Path2, &Path2Size, CurDir, 0);
     StrnCatGrow (&Path2, &Path2Size, L"\\", 0);
@@ -2912,6 +2910,7 @@ EfiShellGetEnvEx (
         if (Buffer == NULL) {
           return NULL;
         }
+
         Status = SHELL_GET_ENVIRONMENT_VARIABLE_AND_ATTRIBUTES (Name, Attributes, &Size, Buffer);
       }
 
@@ -4048,10 +4047,7 @@ InernalEfiShellStartMonitor (
                   EFI_OPEN_PROTOCOL_GET_PROTOCOL
                   );
   if (EFI_ERROR (Status)) {
-    ShellPrintHiiEx (
-      -1,
-      -1,
-      NULL,
+    ShellPrintHiiDefaultEx (
       STRING_TOKEN (STR_SHELL_NO_IN_EX),
       ShellInfoObject.HiiHandle
       );

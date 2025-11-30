@@ -23,7 +23,7 @@
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{3fba5817-1645-46fd-98ac-966e66b608e4}</ProjectGuid>
     <RootNamespace>BaseLib</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -48,7 +48,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <WholeProgramOptimization>false</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -138,7 +138,6 @@
     <ClCompile Include="..\..\EDK2\MdePkg\Library\BaseLib\ARShiftU64.c" />
     <ClCompile Include="..\..\EDK2\MdePkg\Library\BaseLib\BitField.c" />
     <ClCompile Include="..\..\EDK2\MdePkg\Library\BaseLib\CheckSum.c" />
-    <ClCompile Include="..\..\EDK2\MdePkg\Library\BaseLib\ChkStkGcc.c" />
     <ClCompile Include="..\..\EDK2\MdePkg\Library\BaseLib\Cpu.c" />
     <ClCompile Include="..\..\EDK2\MdePkg\Library\BaseLib\CpuDeadLoop.c" />
     <ClCompile Include="..\..\EDK2\MdePkg\Library\BaseLib\DivS64x64Remainder.c" />

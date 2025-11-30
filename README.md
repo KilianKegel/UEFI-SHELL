@@ -34,7 +34,7 @@ https://github.com/KilianKegel/Visual-UEFI-SHELL/tree/main/UEFIBinaries
 Introduce **♉toro UEFI SHELL**, an improved *original* **Tianocore UEFI SHELL** for engineers usage and development requirements.
 
 ### Development improvements:
-* provide original **Visual Studio VS2022** tool chain for **Tianocore UEFI SHELL** 
+* provide original **Visual Studio VS2026** tool chain for **Tianocore UEFI SHELL** 
 	* speedup build time
 	* [modern development experience](https://developer.ibm.com/blogs/the-modern-developer-experience/)
 	* complete **Visual Studio** look and feel
@@ -63,9 +63,9 @@ required build tools for Windows 10/11 machines running the AMD64 instruction se
 * **Python 3.10.11** [python-3.10.11-embed-amd64.zip](https://www.python.org/ftp/python/3.10.11/python-3.10.11-embed-amd64.zip)
 * **NASM 2.16.01** [nasm-2.16.01-win64.zip](https://www.nasm.us/pub/nasm/releasebuilds/2.16.01/win64/nasm-2.16.01-win64.zip)
 
-Additionally provide **Microsoft Visual Studio VS2022** support for that particular **Tianocore EDK2** component `ShellPkg`,
+Additionally provide **Microsoft Visual Studio VS2026** support for that particular **Tianocore EDK2** component `ShellPkg`,
 to enable developers to build, navigate through, explore, modify, extend and easily understand basic concepts of **UEFI SHELL** using **AI-assisted IntelliSense**
-of **VS2022** – a state of the art integrated development environment.
+of **VS2026** – a state of the art integrated development environment.
 
 The above tool set is automatically downloaded, extracted and setup during **LAUNCH.BAT** project start.
 
@@ -95,14 +95,17 @@ The Enterprise WDK contains the necessary elements to build drivers and basic Wi
 1. run `LAUNCH.BAT` to start the session
 2. run `BUILD` (build.cmd), to run the traditional EDK2 build
 
-to run **VS2022**
+to run **VS2026**
 
 3. you need steps 0. .. 2. from above
-4. start `VisualUEFIShell.sln` VS2022 solution from explorer – do *not* start from the above LAUNCHed command line<br>
-   NOTE: EDK2 build automatically creates source code files *that must already be available* for **VS2022** usage
-5. **VS2022** directly creates a `BOOTX64.EFI` **UEFI SHELL** binary in its output directory `UEFIBinaries`
+4. start `VisualUEFIShell.slnx` **VS2026** solution from explorer – do *not* start from the above LAUNCHed command line<br>
+   NOTE: EDK2 build automatically creates source code files *that must already be available* for **VS2026** usage
+5. **VS2026** directly creates a `BOOTX64.EFI` **UEFI SHELL** binary in its output directory `UEFIBinaries`
 
 ## Revision history
+### 20251130 v1.202511.0 build 108
+* update to [**edk2-stable202511**](https://github.com/tianocore/edk2/releases/tag/edk2-stable202511)
+* add **VS2026** support, remove **VS2022** support
 ### 20250906 v1.202508.0 build 98
 * update to [**edk2-stable202508**](https://github.com/tianocore/edk2/releases/tag/edk2-stable202508)
 * update to **TORO C Library 20250906, v0.9.6 Build 757**

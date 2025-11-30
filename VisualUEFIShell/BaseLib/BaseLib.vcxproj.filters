@@ -69,9 +69,6 @@
     <ClCompile Include="..\..\EDK2\MdePkg\Library\BaseLib\BitField.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\EDK2\MdePkg\Library\BaseLib\ChkStkGcc.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\EDK2\MdePkg\Library\BaseLib\Cpu.c">
       <Filter>Source Files</Filter>
     </ClCompile>

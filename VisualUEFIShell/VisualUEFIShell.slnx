@@ -1,0 +1,96 @@
+<Solution>
+  <Configurations>
+    <BuildType Name="Release" />
+    <Platform Name="x64" />
+  </Configurations>
+  <Folder Name="/Solution Items/">
+    <File Path="../README.md" />
+    <File Path="clean.bat" />
+  </Folder>
+  <Project Path="BaseDebugLibNull/BaseDebugLibNull.vcxproj" Id="252eee75-4914-4fd0-845c-29ad4011e372" />
+  <Project Path="BaseIoLibIntrinsic/BaseIoLibIntrinsic.vcxproj" Id="d9847ac5-2594-4233-ac13-c0a65a63725a" />
+  <Project Path="BaseLib/BaseLib.vcxproj" Id="3fba5817-1645-46fd-98ac-966e66b608e4" />
+  <Project Path="BaseMemoryLib/BaseMemoryLib.vcxproj" Id="202a0e0f-63ef-422e-8403-9ee97d4e1831" />
+  <Project Path="BaseOrderedCollectionRedBlackTreeLib/BaseOrderedCollectionRedBlackTreeLib.vcxproj" Id="f346010a-9ff5-4192-98c4-5e92d3ad0c60" />
+  <Project Path="BasePeCoffGetEntryPointLib/BasePeCoffGetEntryPointLib.vcxproj" Id="0c9e6c53-de5d-49e5-b295-28d43ae32e2d" />
+  <Project Path="BasePerformanceLibNull/BasePerformanceLibNull.vcxproj" Id="93b57bd0-60a6-4223-a264-f6e2ec6cde3c" />
+  <Project Path="BasePrintLib/BasePrintLib.vcxproj" Id="2c9369d9-4bab-47c0-88b3-0928e013c503" />
+  <Project Path="BaseReportStatusCodeLibNull/BaseReportStatusCodeLibNull.vcxproj" Id="9f3bb514-e5ae-4bb6-9bb6-8288b307baf1" />
+  <Project Path="BaseSafeIntLib/BaseSafeIntLib.vcxproj" Id="29ea8bdb-8f43-438a-bc54-3adfd2f6a262" />
+  <Project Path="bin2hex/bin2hex.vcxproj" Id="40d22f71-4e75-41c6-855e-62d24ef65adc" />
+  <Project Path="bootX64/bootX64.vcxproj" Id="e9e765ac-68de-43b2-a5ee-1319521d1c77">
+    <BuildDependency Project="BaseDebugLibNull/BaseDebugLibNull.vcxproj" />
+    <BuildDependency Project="BaseIoLibIntrinsic/BaseIoLibIntrinsic.vcxproj" />
+    <BuildDependency Project="BaseLib/BaseLib.vcxproj" />
+    <BuildDependency Project="BaseMemoryLib/BaseMemoryLib.vcxproj" />
+    <BuildDependency Project="BaseOrderedCollectionRedBlackTreeLib/BaseOrderedCollectionRedBlackTreeLib.vcxproj" />
+    <BuildDependency Project="BasePeCoffGetEntryPointLib/BasePeCoffGetEntryPointLib.vcxproj" />
+    <BuildDependency Project="BasePerformanceLibNull/BasePerformanceLibNull.vcxproj" />
+    <BuildDependency Project="BasePrintLib/BasePrintLib.vcxproj" />
+    <BuildDependency Project="BaseReportStatusCodeLibNull/BaseReportStatusCodeLibNull.vcxproj" />
+    <BuildDependency Project="BaseSafeIntLib/BaseSafeIntLib.vcxproj" />
+    <BuildDependency Project="bin2hex/bin2hex.vcxproj" />
+    <BuildDependency Project="DevicePathLib/DevicePathLib.vcxproj" />
+    <BuildDependency Project="DxeHobLib/DxeHobLib.vcxproj" />
+    <BuildDependency Project="DxeNetLib/DxeNetLib.vcxproj" />
+    <BuildDependency Project="DxeServicesLib/DxeServicesLib.vcxproj" />
+    <BuildDependency Project="DxeServicesTableLib/DxeServicesTableLib.vcxproj" />
+    <BuildDependency Project="FilterLibNull/FilterLibNull.vcxproj" />
+    <BuildDependency Project="lib/toroCLibrary/toroCLibrary.vcxproj" />
+    <BuildDependency Project="UefiApplicationEntryPoint/UefiApplicationEntryPoint.vcxproj" />
+    <BuildDependency Project="UefiBootManagerLib/UefiBootManagerLib.vcxproj" />
+    <BuildDependency Project="UefiBootServicesTableLib/UefiBootServicesTableLib.vcxproj" />
+    <BuildDependency Project="UefiFileHandleLib/UefiFileHandleLib.vcxproj" />
+    <BuildDependency Project="UefiHandleParsingLib/UefiHandleParsingLib.vcxproj" />
+    <BuildDependency Project="UefiHiiLib/UefiHiiLib.vcxproj" />
+    <BuildDependency Project="UefiHiiServicesLib/UefiHiiServicesLib.vcxproj" />
+    <BuildDependency Project="UefiLib/UefiLib.vcxproj" />
+    <BuildDependency Project="UefiMemoryAllocationLib/UefiMemoryAllocationLib.vcxproj" />
+    <BuildDependency Project="UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.vcxproj" />
+    <BuildDependency Project="UefiShellAcpiViewCommandLib/UefiShellAcpiViewCommandLib.vcxproj" />
+    <BuildDependency Project="UefiShellBcfgCommandLib/UefiShellBcfgCommandLib.vcxproj" />
+    <BuildDependency Project="UefiShellCommandLib/UefiShellCommandLib.vcxproj" />
+    <BuildDependency Project="UefiShellDebug1CommandsLib/UefiShellDebug1CommandsLib.vcxproj" />
+    <BuildDependency Project="UefiShellDriver1CommandsLib/UefiShellDriver1CommandsLib.vcxproj" />
+    <BuildDependency Project="UefiShellInstall1CommandsLib/UefiShellInstall1CommandsLib.vcxproj" />
+    <BuildDependency Project="UefiShellLevel1CommandsLib/UefiShellLevel1CommandsLib.vcxproj" />
+    <BuildDependency Project="UefiShellLevel2CommandsLib/UefiShellLevel2CommandsLib.vcxproj" />
+    <BuildDependency Project="UefiShellLevel3CommandsLib/UefiShellLevel3CommandsLib.vcxproj" />
+    <BuildDependency Project="UefiShellLib/UefiShellLib.vcxproj" />
+    <BuildDependency Project="UefiShellNetwork1CommandsLib/UefiShellNetwork1CommandsLib.vcxproj" />
+    <BuildDependency Project="UefiShellNetwork2CommandsLib/UefiShellNetwork2CommandsLib.vcxproj" />
+    <BuildDependency Project="UefiSortLib/UefiSortLib.vcxproj" />
+    <BuildDependency Project="VariablePolicyHelperLib/VariablePolicyHelperLib.vcxproj" />
+  </Project>
+  <Project Path="DevicePathLib/DevicePathLib.vcxproj" Id="23f103c3-6cb0-4562-a123-155cff53f8b4" />
+  <Project Path="DxeHobLib/DxeHobLib.vcxproj" Id="b59f8254-0dd7-4024-b123-d84d094200f4" />
+  <Project Path="DxeNetLib/DxeNetLib.vcxproj" Id="08c031b4-b9bd-4689-bf79-c33c97d8852f" />
+  <Project Path="DxeServicesLib/DxeServicesLib.vcxproj" Id="dfe85119-715b-41bb-b925-97bd340ab5dd" />
+  <Project Path="DxeServicesTableLib/DxeServicesTableLib.vcxproj" Id="e55f3a3e-0741-4af6-96dc-262dee5e2b36" />
+  <Project Path="FilterLibNull/FilterLibNull.vcxproj" Id="354e29d1-c35c-4497-9696-4ec01b164754" />
+  <Project Path="lib/toroCLibrary/toroCLibrary.vcxproj" Id="8c250c8a-c234-450d-83ed-f0c898e1a739" />
+  <Project Path="UefiApplicationEntryPoint/UefiApplicationEntryPoint.vcxproj" Id="07288347-da57-4e1d-af8d-5fa2c10807de" />
+  <Project Path="UefiBootManagerLib/UefiBootManagerLib.vcxproj" Id="65e25afb-4e4a-4d39-b771-acaacb679892" />
+  <Project Path="UefiBootServicesTableLib/UefiBootServicesTableLib.vcxproj" Id="9202ee2c-2c52-46d5-af6e-95915252adac" />
+  <Project Path="UefiFileHandleLib/UefiFileHandleLib.vcxproj" Id="0542d94f-badf-469b-96a6-a44bb49003e8" />
+  <Project Path="UefiHandleParsingLib/UefiHandleParsingLib.vcxproj" Id="3627bace-eed0-40ed-80de-ca94a04a2fec" />
+  <Project Path="UefiHiiLib/UefiHiiLib.vcxproj" Id="c4eb84e8-1151-4e89-8ca3-5f7100f6f779" />
+  <Project Path="UefiHiiServicesLib/UefiHiiServicesLib.vcxproj" Id="afdbffa5-7f37-4f7d-98cb-f9950f023fc4" />
+  <Project Path="UefiLib/UefiLib.vcxproj" Id="d18ff998-e979-44a5-9c07-9d5ce7887f00" />
+  <Project Path="UefiMemoryAllocationLib/UefiMemoryAllocationLib.vcxproj" Id="158299c9-124b-41d3-a8de-b7129eb4b61a" />
+  <Project Path="UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.vcxproj" Id="32dcdeec-f8f7-4c04-9ba6-e82fd8ee9e5a" />
+  <Project Path="UefiShellAcpiViewCommandLib/UefiShellAcpiViewCommandLib.vcxproj" Id="83494490-1f3a-4786-9559-41b695078fe9" />
+  <Project Path="UefiShellBcfgCommandLib/UefiShellBcfgCommandLib.vcxproj" Id="437bcd9f-0db8-4719-98a2-3eb5ef033a81" />
+  <Project Path="UefiShellCommandLib/UefiShellCommandLib.vcxproj" Id="45736b32-3d2a-436e-97bd-c82d79ace5dd" />
+  <Project Path="UefiShellDebug1CommandsLib/UefiShellDebug1CommandsLib.vcxproj" Id="5f604d76-d6ca-4d76-ab40-8db036d1942f" />
+  <Project Path="UefiShellDriver1CommandsLib/UefiShellDriver1CommandsLib.vcxproj" Id="43ba7e4c-192f-480d-b368-dad266409cc0" />
+  <Project Path="UefiShellInstall1CommandsLib/UefiShellInstall1CommandsLib.vcxproj" Id="70ddf0fd-8837-4554-93db-22d3160a714c" />
+  <Project Path="UefiShellLevel1CommandsLib/UefiShellLevel1CommandsLib.vcxproj" Id="3610b8c8-e6d7-4f06-83c6-da6b35180dae" />
+  <Project Path="UefiShellLevel2CommandsLib/UefiShellLevel2CommandsLib.vcxproj" Id="b9a7cf9d-db13-4c15-802d-10806bdf2a24" />
+  <Project Path="UefiShellLevel3CommandsLib/UefiShellLevel3CommandsLib.vcxproj" Id="303d2f3a-9311-4fa0-a014-78bcac68982d" />
+  <Project Path="UefiShellLib/UefiShellLib.vcxproj" Id="548755cd-f45e-47f1-97c1-5f85fb778cb0" />
+  <Project Path="UefiShellNetwork1CommandsLib/UefiShellNetwork1CommandsLib.vcxproj" Id="9e9acf32-b3ed-4184-9934-a3696333d135" />
+  <Project Path="UefiShellNetwork2CommandsLib/UefiShellNetwork2CommandsLib.vcxproj" Id="15fc3c43-c426-45ec-9438-f11243defa35" />
+  <Project Path="UefiSortLib/UefiSortLib.vcxproj" Id="fba787d0-a9ea-48f6-a63a-8ee22fd8bd0f" />
+  <Project Path="VariablePolicyHelperLib/VariablePolicyHelperLib.vcxproj" Id="7e83323d-277f-46a0-b870-14f1b0ef6371" />
+</Solution>

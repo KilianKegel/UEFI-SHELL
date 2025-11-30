@@ -1,5 +1,5 @@
 #define MAJORVER 1
-#define MINORVER 202508
+#define MINORVER 202511
 #define PATCHVER 0
 #define YEARSTART 2023
 #define YEARCURRENT 2025
