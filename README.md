@@ -106,6 +106,7 @@ to run **VS2026**
 ### 20251130 v1.202511.0 build 108
 * update to [**edk2-stable202511**](https://github.com/tianocore/edk2/releases/tag/edk2-stable202511)
 * add **VS2026** support, remove **VS2022** support
+  **NOTE: ** **brotli** build fails at LAUNCH, but this is irrelevant for the shell.
 ### 20250906 v1.202508.0 build 98
 * update to [**edk2-stable202508**](https://github.com/tianocore/edk2/releases/tag/edk2-stable202508)
 * update to **TORO C Library 20250906, v0.9.6 Build 757**
