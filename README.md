@@ -103,6 +103,16 @@ to run **VS2026**
 5. **VS2026** directly creates a `BOOTX64.EFI` **UEFI SHELL** binary in its output directory `UEFIBinaries`
 
 ## Revision history
+### 20251213 v1.202511.1 build 110
+* update [ACPICA](https://www.intel.com/content/www/us/en/developer/topic-technology/open/acpica/download.html) **v20251212**:
+	* `AslCompiler` 
+	* `AcpiDump`
+	* `AcpiBin`
+	* `AcpiExec`
+	* `AcpiHelp`
+	* `AcpiSrc`
+	* `AcpiXtract` 
+* update to **TORO C Library 20251213, v0.9.9 Build 799**
 ### 20251130 v1.202511.0 build 108
 * update to [**edk2-stable202511**](https://github.com/tianocore/edk2/releases/tag/edk2-stable202511)
 * add **VS2026** support, remove **VS2022** support<br>
