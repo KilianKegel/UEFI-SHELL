@@ -103,6 +103,9 @@ to run **VS2026**
 5. **VS2026** directly creates a `BOOTX64.EFI` **UEFI SHELL** binary in its output directory `UEFIBinaries`
 
 ## Revision history
+### 20260321
+* downgrade to the latest stable EDK2 (**edk2-stable202508.01**) due to build failures with later releases (**edk2-stable202511**, **edk2-stable202602**)
+* add a check for installed EWDK_1703/VS2015 redistributables to avoid build failures
 ### 20251213 v1.202511.1 build 110
 * update [ACPICA](https://www.intel.com/content/www/us/en/developer/topic-technology/open/acpica/download.html) **v20251212**:
 	* `AslCompiler` 

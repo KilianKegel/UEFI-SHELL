@@ -118,6 +118,26 @@ popd
 
 
 set path=%~dp0;%path%
+rem
+rem check REDISTRIBUTABLE installation
+rem
+where mfc140u.dll
+if errorlevel 1 goto REDIST_NOT_INSTALLED
+goto REDIST_ARE_INSTALLED
+:REDIST_NOT_INSTALLED
+echo.
+echo ############################################################################
+echo EWDK_1703/VS2015 REDISTRIBUTABLES not installed 
+echo Installing now from local EWDK_1703 folder ...
+echo ############################################################################
+pause
+echo "%~dp0\Tools\EWDK_1703\Program Files\Microsoft Visual Studio 14.0\VC\redist\1033\vcredist_x86.exe"
+"%~dp0\Tools\EWDK_1703\Program Files\Microsoft Visual Studio 14.0\VC\redist\1033\vcredist_x86.exe"
+pause
+echo "%~dp0\Tools\EWDK_1703\Program Files\Microsoft Visual Studio 14.0\VC\redist\1033\vcredist_x64.exe"
+"%~dp0\Tools\EWDK_1703\Program Files\Microsoft Visual Studio 14.0\VC\redist\1033\vcredist_x64.exe"
+
+:REDIST_ARE_INSTALLED
 echo ##################################################################################
 echo ###                                                                            ###
 echo ### enter "BUILD" to build the original tianocore shell                        ###
