@@ -106,6 +106,8 @@ to run **VS2026**
 ### 20260321
 * downgrade to the latest stable EDK2 (**edk2-stable202508.01**) due to build failures with later releases (**edk2-stable202511**, **edk2-stable202602**)
 * add a check for installed EWDK_1703/VS2015 redistributables to avoid build failures
+* update to **toro C Library 20260315, v0.9.11 Build 857**
+
 ### 20251213 v1.202511.1 build 110
 * update [ACPICA](https://www.intel.com/content/www/us/en/developer/topic-technology/open/acpica/download.html) **v20251212**:
 	* `AslCompiler` 
@@ -115,27 +117,27 @@ to run **VS2026**
 	* `AcpiHelp`
 	* `AcpiSrc`
 	* `AcpiXtract` 
-* update to **TORO C Library 20251213, v0.9.9 Build 799**
+* update to **toro C Library 20251213, v0.9.9 Build 799**
 ### 20251130 v1.202511.0 build 108
 * update to [**edk2-stable202511**](https://github.com/tianocore/edk2/releases/tag/edk2-stable202511)
 * add **VS2026** support, remove **VS2022** support<br>
   **NOTE:** **brotli** build fails at LAUNCH, but this is irrelevant for the shell.
 ### 20250906 v1.202508.0 build 98
 * update to [**edk2-stable202508**](https://github.com/tianocore/edk2/releases/tag/edk2-stable202508)
-* update to **TORO C Library 20250906, v0.9.6 Build 757**
+* update to **toro C Library 20250906, v0.9.6 Build 757**
 ### 20250726 v1.202505.1 build 96
 * bugfix: PLUGIN mechanism didn't work with latest **edk2-stable202505** release anymore<br>
   Now all "internal" .EFI tools (**diskpart**, **AslCompiler**, **AcpiBin**, **AcpiDump**,  **find**, **more**, **pciview**, etc. ) are available.
 ### 20250706 v1.202505.0 build 80
 * update to [**edk2-stable202505**](https://github.com/tianocore/edk2/releases/tag/edk2-stable202505)
-* update to **TORO C Library 20250706, v0.9.2 Build 289**
+* update to **toro C Library 20250706, v0.9.2 Build 289**
 
 ### 20250222 v1.202502.0 build 70
 * update to [**edk2-stable202502**](https://github.com/tianocore/edk2/releases/tag/edk2-stable202502)
-* update to **TORO C Library 20250222, v0.8.9 Build 231**
+* update to **toro C Library 20250222, v0.8.9 Build 231**
 ### 20241124 v1.202411.0 build 56
 * update to [**edk2-stable202411**](https://github.com/tianocore/edk2/releases/tag/edk2-stable202411)
-* update to **TORO C Library 20241103, v0.8.8 Build 222**
+* update to **toro C Library 20241103, v0.8.8 Build 222**
 ### 20241109
 * update to **edk2-stable202408.01** since original **edk2-stable202408** became broken,
   read https://edk2.groups.io/g/devel/topic/109381734#msg120712)
@@ -148,7 +150,7 @@ to run **VS2026**
 	* `AcpiHelp`
 	* `AcpiSrc`
 	* `AcpiXtract` 
-* update to **TORO C Library 20241013, v0.8.7 Build 200**
+* update to **toro C Library 20241013, v0.8.7 Build 200**
 ### 20240829 v1.202408.0 build 41
 * update to [**edk2-stable202408**](https://github.com/tianocore/edk2/releases/tag/edk2-stable202408)
 * improve version enumeration: MINORVER is EDK2 stable release date
@@ -197,7 +199,7 @@ to run **VS2026**
 * update to [**edk2-stable202311**](https://github.com/tianocore/edk2/releases/tag/edk2-stable202311)
 * add `DEFAULT_UEFI_DRIVE_NAMING` switch to **BOOTX64.INI**, to enable UEFI default drive naming **FS0:**, **FS1:**, **FS2:** ...
 ### 20231119
-* update to **TORO C Library 20231118**
+* update to **toro C Library 20231118**
     * add ACPI timer based synchronization
 ### 20231029
 * add plugins: 
@@ -206,7 +208,7 @@ to run **VS2026**
 	* **AslCompiler**, **AslDump** from https://github.com/tianocore/edk2-staging/tree/CdePkg/blogs/2022-01-16#introduction-of-the-acpica-port-to-uefi
 ### 20230917
 * introduce **toro UEFI SHELL**, *ALPHA*
-* update to **TORO C Library 20230916**
+* update to **toro C Library 20230916**
 ### 20230826
 * update to [**edk2-stable202308**](https://github.com/tianocore/edk2/releases/tag/edk2-stable202308)
 * keep binaries in the directory **UEFIBinaries**

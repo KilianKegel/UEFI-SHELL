@@ -1566,7 +1566,10 @@ InternalShellExecuteDevicePath (
     // If the image is not an app abort it.
     //
     if (LoadedImage->ImageCodeType != EfiLoaderCode) {
-      ShellPrintHiiDefaultEx (
+      ShellPrintHiiEx (
+        -1,
+        -1,
+        NULL,
         STRING_TOKEN (STR_SHELL_IMAGE_NOT_APP),
         ShellInfoObject.HiiHandle
         );
@@ -4047,7 +4050,10 @@ InernalEfiShellStartMonitor (
                   EFI_OPEN_PROTOCOL_GET_PROTOCOL
                   );
   if (EFI_ERROR (Status)) {
-    ShellPrintHiiDefaultEx (
+    ShellPrintHiiEx (
+      -1,
+      -1,
+      NULL,
       STRING_TOKEN (STR_SHELL_NO_IN_EX),
       ShellInfoObject.HiiHandle
       );
